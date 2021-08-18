@@ -1,0 +1,115 @@
+
+<div class="alignment">
+<mat-tab-group mat-align-tabs="center" [selectedIndex]="1">
+    <!-- [selectedIndex]="digit" -->
+    <mat-tab label="Sign Up">
+    <form>
+        <p>
+            <mat-form-field  appearance="outline" style="margin-top: 40px;">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Name"  required #name >
+              
+              <mat-icon matSuffix>perm_identity</mat-icon>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field  appearance="outline" >
+              <mat-label>Address</mat-label>
+              <input matInput placeholder="Address"  required #add >
+              
+              <mat-icon matSuffix>perm_identity</mat-icon>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field  appearance="outline" >
+              <mat-label>Phone Number</mat-label>
+              <input matInput placeholder="Phone Number"  required #phone >
+              
+              <mat-icon matSuffix>perm_identity</mat-icon>
+            </mat-form-field>
+          </p>
+
+     <p>
+      <mat-form-field  appearance="outline" >
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" [formControl]="email" required #box1 [(ngModel)]="SignUpEmail">
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        <mat-icon matSuffix>perm_identity</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your Signup Password</mat-label>
+        <input matInput placeholder="Xagve@53428" maxlength="16" [formControl]="password" required [type]="hide ? 'password' : 'text'" #box2>
+        <!-- <mat-error *ngIf="password.invalid">{{getErrorMessage2()}}</mat-error> -->
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <!-- <mat-hint >{{box2.value?.length || 0}}/16</mat-hint> -->
+        </button>
+      </mat-form-field>
+    </p>
+    <p>
+        <!-- <mat-form-field appearance="outline">
+          <mat-label>Confirm Password</mat-label>
+          <input matInput placeholder="Xagve@53428" maxlength="16" [formControl]="password" required [type]="hide ? 'password' : 'text'" #box2>
+          <mat-error *ngIf="password.invalid">{{getErrorMessage2()}}</mat-error>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+           <mat-hint >{{box2.value?.length || 0}}/16</mat-hint> 
+          </button>
+        </mat-form-field> -->
+      </p>
+    </form>
+    <button class="signup"  mat-raised-button color="warning" (click)="onSubmit(name.value, add.value, phone.value, box1.value, box2.value)">Sign Up</button>
+    </mat-tab>
+    <!--  -->
+  <!-- <mat-tab label="Log In">
+    <form>
+      <p>
+       <mat-form-field  appearance="outline" style="margin-top: 40px;">
+         <mat-label>Enter your email</mat-label>
+         <input matInput placeholder="John@gmail.com" [formControl]="email" required [(ngModel)]="LogInEmail" #box3>
+         <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+         <mat-icon matSuffix>perm_identity</mat-icon>
+       </mat-form-field>
+     </p>
+     <p>
+       <mat-form-field appearance="outline">
+         <mat-label>Enter your password</mat-label>
+         <input matInput  placeholder="John@123" [type]="hide ? 'password' : 'text'" #box4>
+         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+         </button>
+       </mat-form-field>
+     </p>
+     </form>
+     <button class="login" mat-raised-button color="primary" (click)="openSnackBar2(box3.value,box4.value)" >Log In</button>
+
+    </mat-tab> -->
+
+    <mat-tab label="Admin Log In">
+        <form>
+          <p>
+           <mat-form-field  appearance="outline" style="margin-top: 40px;">
+             <mat-label>Enter your email</mat-label>
+             <input matInput placeholder="Admin@gmail.com" [formControl]="email" required [(ngModel)]="LogInEmail" #box5>
+             <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+             <mat-icon matSuffix>perm_identity</mat-icon>
+           </mat-form-field>
+         </p>
+         <p>
+           <mat-form-field appearance="outline">
+             <mat-label>Enter your password</mat-label>
+             <input matInput placeholder="Admin@123" [type]="hide ? 'password' : 'text'" #box6>
+             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+             </button>
+           </mat-form-field>
+         </p>
+         </form>
+         <button class="login" mat-raised-button color="primary" (click)="openSnackBar3(box5.value,box6.value)" >Log In</button>
+    
+        </mat-tab>
+  
+</mat-tab-group>
+</div>

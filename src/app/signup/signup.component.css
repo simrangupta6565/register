@@ -1,0 +1,52 @@
+#logo-container img {
+    align-items: center;
+     width: 180px;
+     height: auto;
+     margin-bottom: 10px;
+  }
+ img{
+     display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+ }
+ .mat-form-field {
+     width: 93%;
+     margin: 0px 10px 0px 10px;
+     
+   }
+   
+   .mat-tab{
+       color: mediumblue;
+   }
+     
+  
+  
+   button.signup{
+     background-color: rgb(252, 126, 8);  
+     font-family: sans-serif;
+     font-size: 20px;
+     font-weight: 100px;
+     width: 93%;
+     height: 50px;
+     margin: 10px 10px 20px 10px;
+   }
+   .mat-dialog-content{
+     padding: '20px auto';
+     margin: '0 auto',
+   }
+   button.login{
+     background-color: rgb(7, 98, 233);
+     font-family: sans-serif;
+     font-size: 20px;
+     font-weight: 100px;
+     width: 93%;
+     height: 50px;
+     margin: 10px 10px 20px 10px;
+   }
+ 
+ .alignment{
+    margin: 5% 10% 5% 50%;
+    
+    border-style: outset;
+ }
